@@ -1,0 +1,144 @@
+/****************************CUSTOM STYLE FOR PLUGINS****************************/
+.nd_donations_navigation { margin:0px; padding: 0px; }
+.nd_donations_navigation li { margin:0px; padding: 0px; }
+.nd_donations_navigation li a { color: #fff; text-decoration: none; font-size: 14px; padding: 8px 20px; display: block; }
+.nd_donations_navigation li a.nd_donations_a_active { background-color: #0073aa; }
+
+#nd_donations_table_premium_addons { margin-bottom: 20px; }
+#nd_donations_table_premium_addons tr td { border-bottom: 1px solid #e7e7e7; }
+#nd_donations_table_premium_addons tr:last-child td { border-bottom: 0px solid #e7e7e7; }
+#nd_donations_table_premium_addons tr:first-child td { border-bottom: 1px solid #e7e7e7; }
+#nd_donations_table_premium_addons tr td { padding: 20px; }
+
+
+
+
+/****************************BASIC CLASSES****************************/
+
+/*structure*/
+.nd_donations_section { float: left; width: 100%; }
+
+/*background-color*/
+.nd_donations_background_color_23282d { background-color: #23282d; }
+.nd_donations_background_color_ffffff { background-color: #ffffff; }
+.nd_donations_background_color_E7E7E7 { background-color: #E7E7E7; }
+
+/*border*/
+.nd_donations_border_bottom_3_solid_0073aa { border-bottom: 3px solid #0073aa; }
+.nd_donations_border_bottom_1_solid_eee { border-bottom: 1px solid #eee; }
+.nd_donations_border_1_solid_e5e5e5 { border: 1px solid #e5e5e5; }
+.nd_donations_border_top_width_0 { border-top-width: 0px; }
+.nd_donations_border_left_width_0 { border-left-width: 0px; }
+.nd_donations_border_collapse_collapse { border-collapse: collapse; }
+
+/*box-shadow*/
+.nd_donations_box_shadow_0_1_1_000_04 { box-shadow: 0 1px 1px rgba(0,0,0,.04); }
+
+/*color*/
+.nd_donations_color_ffffff { color: #fff; }
+.nd_donations_color_ffffff_hover:hover { color: #fff; }
+.nd_donations_color_a0a5aa { color: #a0a5aa; }
+.nd_donations_color_666666 { color: #666666; }
+.nd_donations_color_23282d { color: #23282d; }
+.nd_donations_color_23282d_hover:hover { color: #23282d; }
+
+
+/*padding*/
+.nd_donations_padding_0 { padding: 0px; }
+.nd_donations_padding_10 { padding: 10px; }
+.nd_donations_padding_20 { padding: 20px; }
+.nd_donations_padding_30 { padding: 30px; }
+.nd_donations_padding_left_20 { padding-left: 20px; }
+.nd_donations_padding_right_20 { padding-right: 20px; }
+.nd_donations_padding_left_2 { padding-left: 2px; }
+
+/*margin*/
+.nd_donations_margin_auto { margin: auto; }
+.nd_donations_margin_0 { margin: 0px; }
+.nd_donations_margin_0_important { margin: 0px !important; }
+.nd_donations_margin_left_10 { margin-left: 10px; }
+.nd_donations_margin_left_50 { margin-left: 50px; }
+.nd_donations_margin_left_35 { margin-left: 35px; }
+.nd_donations_margin_left_20_percentage { margin-left: 20%; }
+.nd_donations_margin_right_10 { margin: 10px; }
+.nd_donations_margin_top_10 { margin-top: 10px; }
+.nd_donations_margin_top_20 { margin-top: 20px; }
+.nd_donations_margin_top_25 { margin-top: 25px; }
+.nd_donations_margin_bottom_20 { margin-bottom: 20px; }
+.nd_donations_margin_bottom_15 { margin-bottom: 15px; }
+.nd_donations_margin_bottom_15_important { margin-bottom: 15px !important; }
+.nd_donations_margin_bottom_30_important { margin-bottom: 30px !important; }
+.nd_donations_margin_bottom_10 { margin-bottom: 10px; }
+
+/*box-sizing*/
+.nd_donations_box_sizing_border_box { box-sizing: border-box; }
+
+/*height*/
+.nd_donations_height_1 { height: 1px; }
+.nd_donations_height_5 { height: 5px; }
+.nd_donations_height_10 { height: 10px; }
+.nd_donations_height_20 { height: 20px; }
+.nd_donations_height_100 { height: 100px; }
+.nd_donations_height_300 { height: 300px; }
+.nd_donations_min_height_400 { min-height: 400px; }
+.nd_donations_min_height_3000 { min-height: 3000px; }
+
+/*width*/
+.nd_donations_width_25_em { width: 25em; }
+.nd_donations_width_20_percentage { width: 20%; }
+.nd_donations_width_25_percentage { width: 25%; }
+.nd_donations_width_30_percentage { width: 30%; }
+.nd_donations_width_35_percentage { width: 35%; }
+.nd_donations_width_40_percentage { width: 40%; }
+.nd_donations_width_50_percentage { width: 50%; }
+.nd_donations_width_60_percentage { width: 60%; }
+.nd_donations_width_65_percentage { width: 65%; }
+.nd_donations_width_70_percentage { width: 70%; }
+.nd_donations_width_75_percentage { width: 75%; }
+.nd_donations_width_80_percentage { width: 80%; }
+.nd_donations_width_90_percentage { width: 90%; }
+.nd_donations_width_100_percentage { width: 100%; }
+
+/*float*/
+.nd_donations_float_left { float: left; }
+
+/*overflow*/
+.nd_donations_overflow_hidden { overflow: hidden; }
+
+/*position*/
+.nd_donations_position_relative { position: relative; }
+.nd_donations_position_absolute { position: absolute; }
+
+/*top-right*/
+.nd_donations_top_0 { top: 0px; }
+.nd_donations_top_10 { top: 10px; }
+.nd_donations_top_20 { top: 20px; }
+.nd_donations_right_20 { right: 20px; }
+.nd_donations_top_30 { top: 30px; }
+.nd_donations_right_30 { right: 30px; }
+.nd_donations_left_0 { left: 0px; }
+
+/*display*/
+.nd_donations_display_inline_block { display: inline-block; }
+.nd_donations_display_none { display: none; }
+
+/*cursor*/
+.nd_donations_cursor_auto { cursor: auto; }
+.nd_donations_cursor_auto_important { cursor: auto !important; }
+
+/*text-decoration*/
+.nd_donations_text_decoration_initial { text-decoration: initial; }
+
+/*text-align*/
+.nd_donations_text_align_center { text-align: center; }
+
+/*font-size*/
+.nd_donations_font_size_21 { font-size: 21px;}
+.nd_donations_font_size_16 { font-size: 16px;}
+
+/*line-height*/
+.nd_donations_line_height_21 { line-height: 21px;}
+.nd_donations_line_height_16 { line-height: 16px;}
+
+
+
