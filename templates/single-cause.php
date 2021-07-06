@@ -235,9 +235,6 @@ if(have_posts()) :
 
 	    //START check for show the donation form
 	    if ( nd_donations_get_cause_price(get_the_ID()) != 0 AND nd_donations_get_total_missing_money_to_goal(get_the_ID()) != 0 ) {
-
-	    	
-
 	    	//recover datas from plugin settings
 			$nd_donations_paypal_email = get_option('nd_donations_paypal_email');
 			$nd_donations_paypal_currency = get_option('nd_donations_paypal_currency');
@@ -271,7 +268,7 @@ if(have_posts()) :
 
 	    	<div id="nd_donations_single_cause_form_section" class="nd_donations_section nd_donations_padding_15 nd_donations_box_sizing_border_box">
 
-	    		<h3><strong>'.__('DONATE NOW','nd-donations').'</strong></h3>
+	    		<h3><strong>'.__('DONASI','nd-donations').'</strong></h3>
 	    		
 	    		
 	    		
@@ -286,7 +283,7 @@ if(have_posts()) :
 						    <div style="background-color:'.nd_donations_get_cause_color($nd_donations_id).';" class="nd_donations_display_none_responsive nd_donations_height_30 nd_donations_width_30 nd_donations_text_align_center nd_donations_border_radius_100_percentage nd_donations_display_table_cell nd_donations_vertical_align_middle">
 						        <p class="nd_donations_line_height_30 nd_donations_color_white_important nd_donations_margin_0 nd_donations_padding_0"><strong>1</strong></p>
 						    </div>
-						    <h4 class="nd_donations_display_table_cell nd_donations_vertical_align_middle nd_options_color_greydark nd_donations_padding_0_responsive nd_donations_padding_left_20 nd_donations_margin_0 nd_donations_padding_top_0 nd_donations_text_transform_uppercase">'.__('Insert your amount','nd-donations').'</h4>
+						    <h4 class="nd_donations_display_table_cell nd_donations_vertical_align_middle nd_options_color_greydark nd_donations_padding_0_responsive nd_donations_padding_left_20 nd_donations_margin_0 nd_donations_padding_top_0 nd_donations_text_transform_uppercase">'.__('Isi dengan nominal yang ingin Anda donasikan','nd-donations').'</h4>
 						</div>
 					</div>
 					<!--end title-->
@@ -334,7 +331,7 @@ if(have_posts()) :
 
 
 		    		<div id="nd_donations_single_cause_form_donation_value_container"  class="nd_donations_section nd_donations_position_relative">
-		    			<input onclick="nd_donations_single_cause_form_filter()" onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_pointer nd_donations_section nd_donations_single_cause_form_donation_value" id="nd_donations_single_cause_form_donation_value" name="nd_donations_value" type="text" placeholder="'.__('Insert custom value','nd-donations').'">
+						<input onclick="nd_donations_single_cause_form_filter()" onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_pointer nd_donations_section nd_donations_single_cause_form_donation_value" id="nd_donations_single_cause_form_donation_value" name="nd_donations_value" type="text" placeholder="'.__('Nominal Donasi','nd-donations').'">
 		    		</div>';
 
 
@@ -354,7 +351,7 @@ if(have_posts()) :
 							    <div style="background-color:'.nd_donations_get_cause_color($nd_donations_id).';" class="nd_donations_height_30 nd_donations_display_none_responsive nd_donations_width_30 nd_donations_text_align_center nd_donations_border_radius_100_percentage nd_donations_display_table_cell nd_donations_vertical_align_middle">
 							        <p class="nd_donations_line_height_30 nd_donations_color_white_important nd_donations_margin_0 nd_donations_padding_0"><strong>2</strong></p>
 							    </div>
-							    <h4 class="nd_donations_line_height_25_all_iphone nd_donations_display_table_cell nd_donations_vertical_align_middle nd_options_color_greydark nd_donations_padding_0_responsive nd_donations_padding_left_20 nd_donations_margin_0 nd_donations_padding_top_0 nd_donations_text_transform_uppercase">'.__('You are donating as ','nd-donations').' @'.$nd_donations_current_user->user_login.' <a target="_blank" class="nd_donations_margin_left_10 nd_donations_display_inline_block nd_donations_color_white_important  nd_donations_bg_greydark nd_donations_padding_5_10 nd_donations_font_size_13" href="'.get_edit_user_link().'">'.__('YOU CAN ADD/EDIT YOUR DATAS HERE','nd-donations').'</a></h4>
+							    <h4 class="nd_donations_line_height_25_all_iphone nd_donations_display_table_cell nd_donations_vertical_align_middle nd_options_color_greydark nd_donations_padding_0_responsive nd_donations_padding_left_20 nd_donations_margin_0 nd_donations_padding_top_0 nd_donations_text_transform_uppercase">'.__('Anda berdonasi sebagai ','nd-donations').' @'.$nd_donations_current_user->user_login.' <a target="_blank" class="nd_donations_margin_left_10 nd_donations_display_inline_block nd_donations_color_white_important  nd_donations_bg_greydark nd_donations_padding_5_10 nd_donations_font_size_13" href="'.get_edit_user_link().'">'.__('UBAH PROFILE','nd-donations').'</a></h4>
 							</div>
 						</div>
 						<!--end title-->
@@ -363,10 +360,10 @@ if(have_posts()) :
 
 			    		<div class="nd_donations_section">
 			    			<div id="nd_donations_single_cause_form_donation_name_container" class="nd_donations_position_relative nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_bottom_20_important_responsive nd_donations_padding_right_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_not_allowed nd_donations_section" id="nd_donations_single_cause_form_donation_name" name="nd_donations_name" type="text" readonly placeholder="'.__('Name','nd-donations').'" value="'.$nd_donations_current_user->user_firstname.'" >
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_not_allowed nd_donations_section" id="nd_donations_single_cause_form_donation_name" name="nd_donations_name" type="text" readonly placeholder="'.__('Nama Lengkap','nd-donations').'" value="'.$nd_donations_current_user->user_firstname.'" >
 			    			</div>
 			    			<div id="nd_donations_single_cause_form_donation_surname_container"  class="nd_donations_position_relative nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_left_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_not_allowed nd_donations_section" id="nd_donations_single_cause_form_donation_surname" name="nd_donations_surname" type="text" readonly placeholder="'.__('Surname','nd-donations').'" value="'.$nd_donations_current_user->user_lastname.'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_not_allowed nd_donations_section" id="nd_donations_single_cause_form_donation_surname" name="nd_donations_surname" type="text" readonly placeholder="'.__('Nama Panggilan','nd-donations').'" value="'.$nd_donations_current_user->user_lastname.'">
 			    			</div>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
@@ -375,25 +372,25 @@ if(have_posts()) :
 			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_cursor_not_allowed nd_donations_section" id="nd_donations_single_cause_form_donation_email" name="nd_donations_email" type="text" readonly placeholder="'.__('Email','nd-donations').'" value="'.$nd_donations_current_user->user_email.'" >
 			    			</div>
 			    			<div class="nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_left_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_address" type="text" placeholder="'.__('Address','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_address" type="text" placeholder="'.__('Alamat','nd-donations').'">
 			    			</div>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
 			    		<div class="nd_donations_section">
 			    			<div id="nd_donations_single_cause_form_donation_city_container" class="nd_donations_padding_bottom_20_important_responsive nd_donations_width_50_percentage nd_donations_float_left nd_donations_position_relative nd_donations_padding_right_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_city" name="nd_donations_city" type="text" placeholder="'.__('City','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_city" name="nd_donations_city" type="text" placeholder="'.__('Kota','nd-donations').'">
 			    			</div>
 			    			<div class="nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_left_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_country" type="text" placeholder="'.__('Country','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_country" type="text" placeholder="'.__('Negara','nd-donations').'">
 			    			</div>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
 			    		<div id="nd_donations_single_cause_form_donation_message_container" class="nd_donations_section nd_donations_position_relative">
-			    			<textarea onclick="nd_donations_single_cause_form_filter()" onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_message" id="nd_donations_single_cause_form_donation_message" rows="5" placeholder="'.__('Message','nd-donations').'"></textarea>
+			    			<textarea onclick="nd_donations_single_cause_form_filter()" onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_message" id="nd_donations_single_cause_form_donation_message" rows="5" placeholder="'.__('Pesan','nd-donations').'"></textarea>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
 			    		<div class="nd_donations_section">
-			    			<input id="nd_donations_single_cause_form_donation_submit" class="nd_donations_display_none_important" disabled="disabled" type="submit" value="'.__('DONATE NOW','nd-donations').'">
+			    			<input id="nd_donations_single_cause_form_donation_submit" class="nd_donations_display_none_important" disabled="disabled" type="submit" value="'.__('DONASI SEKARANG','nd-donations').'">
 			    		</div>';
 			    		//END personal informations
 
@@ -419,10 +416,10 @@ if(have_posts()) :
 
 			    		<div class="nd_donations_section">
 			    			<div id="nd_donations_single_cause_form_donation_name_container" class="nd_donations_position_relative nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_bottom_20_important_responsive nd_donations_padding_right_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_name" name="nd_donations_name" type="text" placeholder="'.__('Name','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_name" name="nd_donations_name" type="text" placeholder="'.__('Nama Lengkap','nd-donations').'">
 			    			</div>
 			    			<div id="nd_donations_single_cause_form_donation_surname_container"  class="nd_donations_position_relative nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_left_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_surname" name="nd_donations_surname" type="text" placeholder="'.__('Surname','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_surname" name="nd_donations_surname" type="text" placeholder="'.__('Nama Panggilan','nd-donations').'">
 			    			</div>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
@@ -431,25 +428,25 @@ if(have_posts()) :
 			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_email" name="nd_donations_email" type="text" placeholder="'.__('Email','nd-donations').'">
 			    			</div>
 			    			<div class="nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_left_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_address" type="text" placeholder="'.__('Address','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_address" type="text" placeholder="'.__('Alamat','nd-donations').'">
 			    			</div>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
 			    		<div class="nd_donations_section">
 			    			<div id="nd_donations_single_cause_form_donation_city_container" class="nd_donations_padding_bottom_20_important_responsive nd_donations_width_50_percentage nd_donations_float_left nd_donations_position_relative nd_donations_padding_right_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_city" name="nd_donations_city" type="text" placeholder="'.__('City','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" id="nd_donations_single_cause_form_donation_city" name="nd_donations_city" type="text" placeholder="'.__('Kota','nd-donations').'">
 			    			</div>
 			    			<div class="nd_donations_width_50_percentage nd_donations_float_left nd_donations_padding_left_15 nd_donations_padding_0_responsive nd_donations_box_sizing_border_box nd_donations_width_100_percentage_responsive">
-			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_country" type="text" placeholder="'.__('Country','nd-donations').'">
+			    				<input onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_country" type="text" placeholder="'.__('Negara','nd-donations').'">
 			    			</div>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
 			    		<div id="nd_donations_single_cause_form_donation_message_container" class="nd_donations_section nd_donations_position_relative">
-			    			<textarea onclick="nd_donations_single_cause_form_filter()" onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_message" id="nd_donations_single_cause_form_donation_message" rows="5" placeholder="'.__('Message','nd-donations').'"></textarea>
+			    			<textarea onclick="nd_donations_single_cause_form_filter()" onchange="nd_donations_single_cause_form_filter()" class="nd_donations_section" name="nd_donations_message" id="nd_donations_single_cause_form_donation_message" rows="5" placeholder="'.__('Pesan','nd-donations').'"></textarea>
 			    		</div>
 			    		<div class="nd_donations_section nd_donations_height_20"></div>
 			    		<div class="nd_donations_section">
-			    			<input id="nd_donations_single_cause_form_donation_submit" class="nd_donations_display_none" disabled="disabled" type="submit" value="'.__('DONATE NOW','nd-donations').'">
+			    			<input id="nd_donations_single_cause_form_donation_submit" class="nd_donations_display_none" disabled="disabled" type="submit" value="'.__('DONASI SEKARANG','nd-donations').'">
 			    		</div>';
 			    		//END personal informations
 
@@ -463,7 +460,7 @@ if(have_posts()) :
 	    		</form>
 
 
-	    		<button id="nd_donations_single_cause_form_donation_checkout_submit" style="background-color:'.nd_donations_get_cause_color($nd_donations_id).';" class="nd_donations_border_radius_30 nd_donations_display_inline_block nd_donations_box_sizing_border_box nd_donations_color_white_important nd_options_first_font nd_donations_padding_10_20 nd_donations_cursor_pointer nd_donations_outline_0 nd_donations_font_size_15 nd_donations_border_width_0" onclick="nd_donations_single_cause_form_validate_fields(1)">'.__('CHECKOUT','nd-donations').'</button>
+	    		<button id="nd_donations_single_cause_form_donation_checkout_submit" style="background-color:'.nd_donations_get_cause_color($nd_donations_id).';" class="nd_donations_border_radius_30 nd_donations_display_inline_block nd_donations_box_sizing_border_box nd_donations_color_white_important nd_options_first_font nd_donations_padding_10_20 nd_donations_cursor_pointer nd_donations_outline_0 nd_donations_font_size_15 nd_donations_border_width_0" onclick="nd_donations_single_cause_form_validate_fields(1)">'.__('PILIH METODE PEMBAYARAN','nd-donations').'</button>
 	    		<div class="nd_donations_section nd_donations_height_40"></div>
 
 	    		';
@@ -487,14 +484,19 @@ if(have_posts()) :
 						<ul class="nd_donations_list_style_none nd_donations_margin_0 nd_donations_padding_0 nd_donations_padding_0_responsive nd_donations_float_left nd_donations_padding_left_20">
 							<li class="nd_donations_display_inline_block nd_donations_margin_right_40">
 								<h4>
-									<a class="nd_donations_outline_0 nd_donations_padding_10_0 nd_donations_padding_top_5 nd_donations_display_inline_block nd_options_first_font nd_options_color_greydark nd_donations_text_transform_uppercase" href="#nd_donations_single_cause_tab_paypal">'.__('Paypal','nd-donations').'</a>
+									<a class="nd_donations_outline_0 nd_donations_padding_10_0 nd_donations_padding_top_5 nd_donations_display_inline_block nd_options_first_font nd_options_color_greydark nd_donations_text_transform_uppercase" href="#nd_donations_single_cause_tab_xendit">'.__('Xendit','nd-donations').'</a>
 								</h4>
 							</li>
 							<li class="nd_donations_display_inline_block nd_donations_margin_right_40">
 								<h4>
-									<a class="nd_donations_outline_0 nd_donations_padding_10_0 nd_donations_padding_top_5 nd_donations_display_inline_block nd_options_first_font nd_options_color_greydark nd_donations_text_transform_uppercase" href="#nd_donations_single_cause_tab_offline_donation">'.__('Offline Donation','nd-donations').'</a>
+									<a class="nd_donations_outline_0 nd_donations_padding_10_0 nd_donations_padding_top_5 nd_donations_display_inline_block nd_options_first_font nd_options_color_greydark nd_donations_text_transform_uppercase" href="#nd_donations_single_cause_tab_paypal">'.__('Paypal','nd-donations').'</a>
 								</h4>
 							</li>
+							<!--<li class="nd_donations_display_inline_block nd_donations_margin_right_40">
+								<h4>
+									<a class="nd_donations_outline_0 nd_donations_padding_10_0 nd_donations_padding_top_5 nd_donations_display_inline_block nd_options_first_font nd_options_color_greydark nd_donations_text_transform_uppercase" href="#nd_donations_single_cause_tab_offline_donation">'.__('Offline Donation','nd-donations').'</a>
+								</h4>
+							</li>-->
 						</ul>
 
 					</div>
@@ -503,10 +505,37 @@ if(have_posts()) :
 					<div class="nd_donations_section nd_donations_height_30"></div>';
 
 
+					//START xendit donation content
+					$nd_donations_result .= '
+					<div class="nd_donations_section" id="nd_donations_single_cause_tab_xendit">
+							<div class="nd_donations_section nd_donations_box_sizing_border_box">
+							    <div class="nd_donations_section nd_donations_padding_15 nd_donations_box_sizing_border_box nd_donations_border_1_solid_grey">
+							        <div class="nd_donations_display_table nd_donations_float_left">
+							            <img alt="" class="nd_donations_margin_right_10 nd_donations_display_table_cell nd_donations_vertical_align_middle" width="15" src="'.esc_url(plugins_url('icon-alert-greydark.svg', __FILE__ )).'">
+							            <h5 class="nd_donations_padding_top_0 nd_donations_display_table_cell nd_donations_vertical_align_middle nd_options_color_grey">
+											Xendit dapat menerima pembayaran online menggunakan berbagai metode, seperti transfer bank, virtual account, kartu kredit/debit, gerai ritel dan e-wallet.
+										</h6>
+							        </div>
+							    </div>
+							</div>
+
+							<div class="nd_donations_section nd_donations_height_30"></div>
+
+							<div class="nd_donations_section nd_donations_box_sizing_border_box">
+								<input style="background-color:'.nd_donations_get_cause_color($nd_donations_id).'; background-image:url('.esc_url(plugins_url('xendit-logo-white.svg', __FILE__ )).'); background-size: 57px; padding-right: 83px !important; background-position: right 20px top 10px; background-repeat:no-repeat;" 
+									id="nd_donations_single_cause_form_donation_xendit_submit" 
+									class="nd_donations_background_repeat_no_repeat nd_donations_border_radius_30 nd_donations_box_sizing_border_box nd_donations_color_white_important nd_options_first_font nd_donations_padding_10_20_important nd_donations_cursor_pointer nd_donations_outline_0 nd_donations_font_size_15 nd_donations_border_width_0 " 
+									type="submit" 
+									onclick="nd_donations_single_cause_form_validate_fields(0)" 
+									value="'.__('Donasi menggunakan','nd-donations').'">
+							</div>
+					</div>';
+					//END xendit donation content
+
 
 					//START offline donation content
 					$nd_donations_result .= '
-					<div class="nd_donations_section" id="nd_donations_single_cause_tab_offline_donation">
+					<!--<div class="nd_donations_section" id="nd_donations_single_cause_tab_offline_donation">
 						
 						<div class="nd_donations_section nd_donations_box_sizing_border_box">
                                         
@@ -521,13 +550,12 @@ if(have_posts()) :
 
 						<div class="nd_donations_section nd_donations_height_30"></div>
 
-						<button style="background-color:'.nd_donations_get_cause_color($nd_donations_id).';" class="nd_donations_border_radius_30 nd_donations_display_inline_block nd_donations_box_sizing_border_box nd_donations_color_white_important nd_options_first_font nd_donations_padding_10_20 nd_donations_cursor_pointer nd_donations_outline_0 nd_donations_font_size_15 nd_donations_border_width_0" onclick="nd_donations_single_cause_form_validate_fields(0)">'.__('DONATE NOW','nd-donations').'</button>
+						<button style="background-color:'.nd_donations_get_cause_color($nd_donations_id).';" 
+							class="nd_donations_border_radius_30 nd_donations_display_inline_block nd_donations_box_sizing_border_box nd_donations_color_white_important nd_options_first_font nd_donations_padding_10_20 nd_donations_cursor_pointer nd_donations_outline_0 nd_donations_font_size_15 nd_donations_border_width_0" 
+							onclick="nd_donations_single_cause_form_validate_fields(0)">'.__('DONASI SEKARANG','nd-donations').'</button>
 					
-					</div>';
+					</div>-->';
 					//END offline donation content
-					
-
-
 
 					//START paypal donation content
 					$nd_donations_result .= '
@@ -573,7 +601,6 @@ if(have_posts()) :
 
 					</div>';
 					//END paypal donation content
-
 
 
 
