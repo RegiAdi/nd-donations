@@ -4,8 +4,8 @@ Plugin Name:       Donations
 Description:       The plugin is used to manage your donations. To get started: 1) Click the "Activate" link to the left of this description. 2) Follow the documentation for installation for use the plugin in the better way.
 Version:           1.7
 Plugin URI:        https://nicdark.com
-Author:            Nicdark
-Author URI:        https://nicdark.com
+Author:            Nicdark, Xendit Integration by Regi Adi
+Author URI:        https://github.com/RegiAdi/nd-donations
 License:           GPLv2 or later
 */
 
