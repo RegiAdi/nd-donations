@@ -7,6 +7,10 @@ Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Xendit integration by Regi Adi 
+LinkedIn https://www.linkedin.com/in/regi-adi
+Github https://github.com/RegiAdi
+
 Best solution for donations. For any charity and nonprofit website. Receive donations with PayPal integration and get money for your causes. Donations WP plugin.
 
 == Description ==
